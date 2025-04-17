@@ -1,0 +1,122 @@
+/* RESET */
+*{
+    margin: px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Estilos del header */
+header {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+/* Estilos del nav */
+header nav {
+    flex-grow: 1; 
+    width: 100%;
+}
+
+/* Estilos del logo*/
+  header img {
+    margin-left: 10px;
+   width: 200px;
+    margin-bottom: 0px; 
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+/* Estilos de los elementos del nav*/
+header nav ul {
+     list-style: none;
+    height: 50px;
+    color:azure;
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    background-color: rgb(255, 85, 0);
+}
+
+/* Estilos de los elementos del nav*/
+header nav ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 16px; 
+}
+
+/* Hover de los li*/
+header nav ul li a:hover {
+    color: rgb(17, 0, 255); 
+}
+
+/* Estilos de la imagen del main*/
+main img {
+    display: block; 
+    margin: 0; 
+     width: 50%;
+   }
+
+/* Estilos del main*/
+main {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+/* Estilos del footer*/
+footer h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Estilos del div del header*/
+header div {
+    justify-content: end;
+}
+
+div {
+    padding-right: 20px;
+}
+
+/* Responsive mobile*/
+@media (min-width: 768px) {
+    header {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    nav ul li {
+        font-size: 18px;
+    }
+}
+
+/* Responsive desktop*/
+@media (max-width: 767px) {
+    nav ul {
+        display: none; 
+    }
+
+    .dropdown {
+        display: block; 
+    }
+
+    main img {
+        width: 90%; 
+    }
+}
