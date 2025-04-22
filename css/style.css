@@ -10,7 +10,7 @@ header h1 {
     text-align: center;
 }
 
-/* Estilos del grid */
+/* Estilos del grid de mujeres*/
 .container {
     display: grid;
     grid-template-columns: repeat(3, 18%); /* 3 columnas iguales */
@@ -28,6 +28,23 @@ header h1 {
     margin: auto;        /* Centra las imágenes */
 }
 
+/* Estilos del grid de marcas*/
+.container-marca {
+    display: grid;
+    grid-template-columns: repeat(2, 25%); /* 3 columnas iguales */
+    grid-template-rows: repeat(2, auto);    /* 2 filas ajustadas al contenido */                          /* Espacio entre celdas */
+    justify-content: center;               /* Centra el grid horizontalmente */
+    align-content: center;                 /* Centra el grid verticalmente */
+}
+
+/* Imágenes */
+.container-marca img {
+    width: 100%;        /* Las imágenes ocuparán el 100% del ancho de la celda */
+    height: auto;       /* Mantienen la proporción */
+    object-fit: contain; /* No recorta las imágenes */
+    display: block;      /* Elimina márgenes adicionales */
+    margin: auto;        /* Centra las imágenes */
+}
 /* Estilos del header */
 header {
     display: flex; 
