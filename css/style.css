@@ -1,169 +1,117 @@
-/* RESET */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header h1 {
-    font-size: 16px;
-    text-align: center;
-}
-
-/* Estilos del grid de mujeres*/
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 18%); /* 3 columnas iguales */
-    grid-template-rows: repeat(2, auto);    /* 2 filas ajustadas al contenido */                          /* Espacio entre celdas */
-    justify-content: center;               /* Centra el grid horizontalmente */
-    align-content: center;                 /* Centra el grid verticalmente */
-}
-
-/* Imágenes */
-.container img {
-    width: 100%;        /* Las imágenes ocuparán el 100% del ancho de la celda */
-    height: auto;       /* Mantienen la proporción */
-    object-fit: contain; /* No recorta las imágenes */
-    display: block;      /* Elimina márgenes adicionales */
-    margin: auto;        /* Centra las imágenes */
-}
-
-/* Estilos del grid de marcas*/
-.container-marca {
-    display: grid;
-    grid-template-columns: repeat(2, 25%); /* 3 columnas iguales */
-    grid-template-rows: repeat(2, auto);    /* 2 filas ajustadas al contenido */                          /* Espacio entre celdas */
-    justify-content: center;               /* Centra el grid horizontalmente */
-    align-content: center;                 /* Centra el grid verticalmente */
-}
-
-/* Imágenes */
-.container-marca img {
-    width: 100%;        /* Las imágenes ocuparán el 100% del ancho de la celda */
-    height: auto;       /* Mantienen la proporción */
-    object-fit: contain; /* No recorta las imágenes */
-    display: block;      /* Elimina márgenes adicionales */
-    margin: auto;        /* Centra las imágenes */
-}
-/* Estilos del header */
 header {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 10px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
-
-/* Estilos del nav */
+header h1 {
+  font-size: 16px;
+  text-align: center;
+}
 header nav {
-    flex-grow: 1; 
-    width: 100%;
+  flex-grow: 1;
+  width: 100%;
 }
-
-/* Estilos del logo*/
-  header img {
-    margin-left: 10px;
-   width: 200px;
-    margin-bottom: 0px; 
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
-
-/* Estilos de los elementos del nav*/
 header nav ul {
-     list-style: none;
-    height: 50px;
-    color:azure;
-    display: flex;
-    justify-content: center;
-    gap:50px;
-    font-size: 16px;
-    font-weight: 600;
-    align-items: center;
-    background-color: rgb(255, 85, 0);
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 50px;
+  background-color: rgb(255, 85, 0);
 }
-
-/* Estilos de los elementos del nav*/
 header nav ul li a {
-    text-decoration: none; 
-    color: white; 
-    font-size: 16px; 
+  text-decoration: none;
+  color: azure;
+  font-size: 16px;
 }
-
-div.dropdown {
-    padding-right: 40px; /* Sobrescribe el padding solo en dropdown */
-}
-
-/* Hover de los li*/
 header nav ul li a:hover {
-    color: rgb(17, 0, 255); 
+  color: rgb(17, 0, 255);
+}
+header img {
+  margin-left: 10px;
+  width: 200px;
+  padding: 10px;
+}
+header div.dropdown {
+  padding-right: 40px;
 }
 
-/* Estilos de la imagen del main*/
-main img {
-    display: block; 
-    margin: 0; 
-     width: 50%;
-   }
+.container,
+.container-marca {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.container.container,
+.container-marca.container {
+  grid-template-columns: repeat(3, 18%);
+  grid-template-rows: repeat(2, auto);
+}
+.container.container-marca,
+.container-marca.container-marca {
+  grid-template-columns: repeat(2, 25%);
+  grid-template-rows: repeat(2, auto);
+}
+.container img,
+.container-marca img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+}
 
-/* Estilos del main*/
 main {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main img {
+  display: block;
+  width: 50%;
 }
 
-/* Estilos del footer*/
 footer h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 50px;
 }
 
-/* Estilos del div del header*/
-header div {
-    justify-content: end;
-}
-
-
-.dropdown text-end {
-    padding: 50px; /* O el valor deseado */
-    margin: 0; /* Ajusta márgenes si es necesario */
-}
-
-/* Responsive mobile*/
 @media (min-width: 768px) {
-    header {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 40px;
-    }
-
-    nav ul {
-        display: flex;
-        gap: 20px;
-    }
-
-    nav ul li {
-        font-size: 18px;
-    }
+  header {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  nav ul li {
+    font-size: 18px;
+  }
 }
-
-/* Responsive desktop*/
 @media (max-width: 767px) {
-    nav ul {
-        display: none; 
-    }
-
-    .dropdown {
-        display: block; 
-    }
-
-    main img {
-        width: 90%; 
-    }
+  nav ul {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+  main img {
+    width: 90%;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

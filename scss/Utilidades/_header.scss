@@ -1,0 +1,54 @@
+   // Estilos del header
+    
+    header {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: $padding-size;
+
+    // Estilos de los títulos de página
+    h1 {
+        font-size: 16px;
+        text-align: center;
+      }
+  // Estilos del nav los ul y los li del header usando nesting
+    nav {
+      flex-grow: 1;
+      width: 100%;
+  
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $gap-size;
+        height: 50px;
+        background-color: $primary-color;
+  
+        li {
+          a {
+            text-decoration: none;
+            color: $secondary-color;
+            font-size: $font-size;
+  
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+    }
+  // Estilo de la imagen del header usando nesting
+    img {
+      margin-left: $padding-size;
+      width: 200px;
+      padding: $padding-size;
+    }
+  
+    // Estilo del dropdown de BT
+    div.dropdown {
+      padding-right: 40px;
+    }
+  }
+  
