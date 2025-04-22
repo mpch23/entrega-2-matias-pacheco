@@ -1,4 +1,6 @@
-   // Estilos del header
+
+   
+   // Estilos del header usando variables para el padding
     
     header {
          display: flex;
@@ -12,7 +14,7 @@
         font-size: 16px;
         text-align: center;
       }
-  // Estilos del nav los ul y los li del header usando nesting
+  // Estilos del nav los ul y los li del header usando nesting y variables 
     nav {
       flex-grow: 1;
       width: 100%;
@@ -23,7 +25,7 @@
         justify-content: center;
         align-items: center;
         gap: $gap-size;
-        height: 50px;
+        height: 50px; 
         background-color: $primary-color;
   
         li {
@@ -31,7 +33,6 @@
             text-decoration: none;
             color: $secondary-color;
             font-size: $font-size;
-  
             &:hover {
               color: $link-hover-color;
             }
@@ -39,7 +40,7 @@
         }
       }
     }
-  // Estilo de la imagen del header usando nesting
+  // Estilo de la imagen del header usando nesting y variables
     img {
       margin-left: $padding-size;
       width: 200px;
