@@ -1,9 +1,34 @@
+/* Responsive para imágen del index */
+main img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Responsive para imágen del index en Tablet */
+@media (max-width: 1024px) {
+  main img {
+    width: 80%;
+  }
+}
+
+/* Responsive para imágen del index en Móvil */
+@media (max-width: 767px) {
+  main img {
+    width: 90%;
+  }
+}
+
+/* Responsive para el grid usado en la página mujeres en tablet*/
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
   }
 }
+/* Responsive para el grid usado en la página mujeres en móvil*/
 
 @media (max-width: 767px) {
   .grid-container {
@@ -12,31 +37,39 @@
   }
 }
 
+/* Responsive para el grid usado en la página marcas en tablet y móvil*/
 
-@media (max-width: 767px) {
+@media (max-width: 940px) {
   .container-marca {
     grid-template-columns: 50%;
     grid-template-rows: repeat(4, auto);
   }
 }
 
-@media (max-width: 1024px) {
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
+/* Responsive para el nav y los li usado móvil*/
+
+@media (max-width: 767px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0;
+    padding: 10px 0;
+    height: auto;
   }
 
-  nav ul li {
-    flex: 0 0 45%; 
+  header nav ul li {
+    width: 100%;
     text-align: center;
   }
 
-  nav ul li a {
-    display: inline-block;
-    padding: 10px 0;
-    width: 100%;
+  header nav {
+    height: auto;
+    padding-bottom: 20px;
   }
 }
+
+
+
+
+
